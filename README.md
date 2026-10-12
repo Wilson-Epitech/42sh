@@ -14,7 +14,7 @@
 
 <p align="center"><img src=".github/assets/42sh.gif" alt="42sh" width="820"/></p>
 
-## En deux mots
+## Le projet en quelques mots
 
 Le projet de fin de première année. On réutilise tout ce qu'on a appris en programmation système pour écrire un shell qu'on peut utiliser au quotidien : pipes, redirections, variables, historique… et un prompt qui donne envie de s'en servir.
 
@@ -26,10 +26,6 @@ Le projet de fin de première année. On réutilise tout ce qu'on a appris en pr
 - Builtins : `cd` (et `cd -`), `echo`, `env`, `setenv`, `unsetenv`, `history`, `exit`
 - **Historique** persistant et horodaté, navigation aux flèches
 - **Prompt** coloré avec utilisateur, dossier courant et code de retour de la dernière commande, adapté à la largeur du terminal
-
-## Sous le capot
-
-Chaque ligne est découpée en commandes, puis en pipelines. Pour chaque pipeline, le shell crée les pipes, fork chaque commande, branche les entrées / sorties avec `dup2`, applique les redirections et attend les processus. Les builtins sont exécutés dans le processus du shell quand ils doivent modifier son état (`cd`, `setenv`…).
 
 ## Lancer le projet
 
@@ -44,4 +40,4 @@ make
 
 Mathis Brehm, Yanis Harkouk, Wilson Bordichon, Eva Legrand
 
-**Ma part :** J'ai fait l'**historique** (commande `history`, fichier persistant, horodatage), le **prompt** dynamique et coloré, les options `--help` / `--list-op`, et corrigé la redirection `<<` ainsi que le comportement du shell quand on supprime `PATH`.
+**Ma partition :** J'ai fait l'**historique** (commande `history`, fichier persistant, horodatage), le **prompt** dynamique et coloré, les options `--help` / `--list-op`, et corrigé la redirection `<<` ainsi que le comportement du shell quand on supprime `PATH`.
